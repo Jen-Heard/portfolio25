@@ -328,7 +328,7 @@ background: #feffff;
 display: block;
 height: 3px;
 position: relative;
-width: 2.5em;
+width: 2.2em;
 }
 
 .hamb-line::before,
@@ -425,9 +425,9 @@ animation: slideIn 0.5s forwards;
 }
 
 .create {
-  text-align: center;
+  text-align: left;
   width: 100%;
-  padding-top: 150px;
+  padding-top: 175px;
 }
 
    .create h3 {
