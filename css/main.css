@@ -794,6 +794,10 @@ width: 90%;
   background-color: #40e0d0;
 }
 
+.services-checkboxes label input[type="checkbox"] {
+  margin-right: 10px; 
+}
+
 #contact-form button {
   background-color: #000000;
   color: #40e0d0;
@@ -1030,7 +1034,6 @@ padding-right: 10px;
 }
 
 .create {
- 
 text-align: left;
 padding-left: 10px;
 }
@@ -1162,24 +1165,24 @@ padding: 75px 0;
 }
 
 #contact-me .content-wrapper {
-width: 90%;
+width: 80%;
 } 
 
-  #contact-me p {
-  width: 60%;
-  font-size: 1.2em;
-  }
+#contact-me p {
+width: 70%;
+font-size: 1.2em;
+}
 
-  #contact-form {
-    width: 75%;
-  }
+#contact-form {
+ width: 60%;
+}
 
-  #contact-form button {
-    width: 50%;
+#contact-form button {
+ width: 50%;
   }
 
   #contact-form input[type=text], #contact-form input[type=email], #contact-form textarea {
-    width: 80%;
+    width: 100%;
   }
 
   #contact-form textarea {
@@ -1187,12 +1190,11 @@ width: 90%;
   }
 
   #contact-form label {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 
-  .dropdown-content label {
-    padding: 8px 16px;
-    font-size: 1.2em;
+  #contact-form .services-checkboxes label {
+    font-size: 1.1em;
   }
 
   .connect {
@@ -1455,6 +1457,14 @@ width: 90%;
 width: 90%;
 }
 
+#services-list ul {
+  width: 75%;
+}
+
+#services-list li {
+  font-size: 1.4em;
+}
+
 #contact-me {
 padding: 100px 0;
 }
@@ -1463,10 +1473,27 @@ padding: 100px 0;
 width: 80%;
 }
 
+#contact-me p {
+font-size: 1.4em;
+}
+
+#contact-form label {
+font-size: 1.6em;
+}
+
+#contact-form .services-checkboxes label {
+  font-size: 1.3em;
+}
+
+#contact-form button {
+  font-size: 1.6em;
+}
+
 #footer {
 padding-top: 75px;
 }
 
+}
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
