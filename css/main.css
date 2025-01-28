@@ -480,11 +480,11 @@ animation: slideIn 0.5s forwards;
 }
 
 #see-more {
-  padding: 20px 0;
+  padding-top: 20px;
   margin-top: 40px;
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 300;
- font-size: 1.2em;
+  font-size: 1.2em;
   }
 
 .inner-container  {
@@ -498,7 +498,7 @@ animation: slideIn 0.5s forwards;
   width: 85%;
 }
 
- .inner-container figure {
+ .card-front figure {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -511,7 +511,7 @@ animation: slideIn 0.5s forwards;
   border-radius: 10px;
   filter: grayscale(100%);
   transition: transform 0.5s ease, filter 0.5s ease; 
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .inner-container img:hover {
@@ -520,15 +520,40 @@ animation: slideIn 0.5s forwards;
  }
 
  .inner-container h4 {
-  padding: 20px 0;
+  padding-top: 20px;
   margin: 0;
  }
 
  .inner-container p {
   margin: 0;
-  padding: 10px 0;
-  width: 90%;
+  padding: 20px 0 10px 0;
+  width: 95%;
  }
+
+ .card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 90%;
+ }
+
+.card-front, .card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+.card-back a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 /*** About Section ***/
 
@@ -686,7 +711,7 @@ animation: slideIn 0.5s forwards;
 #services-list ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   list-style: none;
   width: 90%;
@@ -736,9 +761,9 @@ animation: slideIn 0.5s forwards;
 #contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  width: 70%;
+  width: 80%;
   padding: 50px 0 20px 0;
 }
 
@@ -747,38 +772,30 @@ animation: slideIn 0.5s forwards;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 80%;
   padding: 20px 0;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  width: 100%;
+.services-checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #151519;
-  min-width: 300px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content label {
+.services-checkboxes label {
   display: block;
-  padding: 8px 16px;
+  padding: 10px 0;
   cursor: pointer;
-  color: #40e0d0
+  color: #40e0d0;
 }
 
-.dropdown-content label:hover {
+.services-checkboxes label:hover {
   background-color: #40e0d0;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.services-checkboxes label input[type="checkbox"] {
+  margin-right: 10px; 
 }
 
 #contact-form button {
@@ -789,6 +806,7 @@ animation: slideIn 0.5s forwards;
   padding: 10px 20px;
   border: 10px;
   border-radius: 10px;
+  align-self: center;
   cursor: pointer;
   width: 70%;
 }
@@ -1016,7 +1034,6 @@ padding-right: 10px;
 }
 
 .create {
- 
 text-align: left;
 padding-left: 10px;
 }
@@ -1148,24 +1165,24 @@ padding: 75px 0;
 }
 
 #contact-me .content-wrapper {
-width: 90%;
+width: 80%;
 } 
 
-  #contact-me p {
-  width: 60%;
-  font-size: 1.2em;
-  }
+#contact-me p {
+width: 70%;
+font-size: 1.2em;
+}
 
-  #contact-form {
-    width: 75%;
-  }
+#contact-form {
+ width: 60%;
+}
 
-  #contact-form button {
-    width: 50%;
+#contact-form button {
+ width: 50%;
   }
 
   #contact-form input[type=text], #contact-form input[type=email], #contact-form textarea {
-    width: 80%;
+    width: 100%;
   }
 
   #contact-form textarea {
@@ -1173,12 +1190,11 @@ width: 90%;
   }
 
   #contact-form label {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 
-  .dropdown-content label {
-    padding: 8px 16px;
-    font-size: 1.2em;
+  #contact-form .services-checkboxes label {
+    font-size: 1.1em;
   }
 
   .connect {
@@ -1349,12 +1365,16 @@ width: 100%;
 height: 100%;
 }
 
+.inner-container:hover .card {
+  transform: rotateY(180deg);
+  }
+
 .card {
 width: 100%;
 height: 100%;
 position: relative;
 transform-style: preserve-3d;
-transition: transform 0.6s;
+transition: transform .8s .3s;
 }
 
 .card-front,
@@ -1380,18 +1400,18 @@ padding: 10px 0;
 }
 
 .card-back h4 {
-font-size: 1.3em;
-padding: 10px 0;
+font-size: 1.1em;
+padding-top: 5px;
 font-weight: 400;
+background: linear-gradient(to left, #feffff, #40e0d0 100%);
+background-position: 0 100%;
+background-size: 100% 2px;
+background-repeat: repeat-x;
 }
 
 .card-back p {
-font-size: .9em;
-padding: 5px 0;
-}
-
-.inner-container:hover .card {
-transform: rotateY(180deg);
+font-size: .8em;
+padding-top: 5px;
 }
 
 #about .content-wrapper {
@@ -1441,18 +1461,47 @@ width: 90%;
 width: 90%;
 }
 
+#services-list ul {
+  width: 75%;
+}
+
+#services-list li {
+  font-size: 1.4em;
+}
+
 #contact-me {
 padding: 100px 0;
 }
 
 #contact-me .content-wrapper {
-width: 80%;
+width: 75%;
+}
+
+#contact-me p {
+font-size: 1.4em;
+}
+
+#contact-form label {
+font-size: 1.6em;
+}
+
+#contact-form .services-checkboxes label {
+  font-size: 1.3em;
+}
+
+#contact-form button {
+  font-size: 1.6em;
 }
 
 #footer {
 padding-top: 75px;
 }
 
+.footer-icons {
+width: 50%;
+padding: 20px 0;
+
+}
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
