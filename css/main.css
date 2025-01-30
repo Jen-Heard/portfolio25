@@ -585,12 +585,11 @@ width: 90%;
   justify-content: center;
 }
 
-.headshot {
+img.headshot {
   width: 100%; 
-  height: auto; 
   filter: grayscale(100%);
   transition: filter 0.5s ease, transform 0.5s ease;
-  border-radius: 150px;
+  border-radius: 200px;
   object-fit: cover;
 }
 
@@ -599,9 +598,8 @@ width: 90%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  height: auto;
-  border-radius: 150px;
+  width: 38%;
+  border-radius: 300px;
   box-shadow: 3px 3px 3px #40e0d0;
   margin: 40px 0; 
 }
@@ -1140,6 +1138,7 @@ justify-content: space-evenly;
 width: 100%;
 }
 
+
 img.headshot {
 width: 100%;
 }
@@ -1158,7 +1157,7 @@ text-align: center;
 }
 
 #headshot {
-width: 30%;
+width: 22%;
 margin: 0;
 padding: 0;
 order: 2;
@@ -1516,7 +1515,7 @@ width: 100%;
 }
 
 #headshot {
-width: 25%;
+width: 18%;
 margin: 0;
 padding: 0;
 }
