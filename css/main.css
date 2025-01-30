@@ -274,7 +274,7 @@ a .footer-icon {
 
  figure {
   margin: 0;
-  width: 50%;
+  width: 55%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -307,6 +307,7 @@ z-index: 999;
 display: block;
 padding: 20px;
 color: #feffff;
+font-family: "Poppins", Arial, sans-serif;
 font-size: 1.5em;
 font-variant: small-caps;
 text-align: center;
@@ -400,7 +401,7 @@ animation: slideIn 0.5s forwards;
   display: flex;
   justify-content: center;
   width: 100%;
-  background-image: url(../img/hero-image.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(../img/hero-image.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1025,7 +1026,7 @@ width: 100%;
  }
 
 figure {
-width: 40%;
+width: 50%;
 margin: 0;
 padding-left: 40px;
 } 
@@ -1035,7 +1036,7 @@ a.logo {
 }
 
 .logo img { 
-width: 70%;
+width: 100%;
 margin: 0; 
 }
 
@@ -1046,21 +1047,19 @@ display: flex;
 justify-content: flex-end;
 align-items: center;
 background-color: transparent;
-width: 70%;
+width: 100%;
 }
 
 .menu {
 display: flex;
 flex-flow: row wrap;
-justify-content: space-between;
 align-items: center;
-font-size: 1em;
 }
 
 .menu a {
 font-size: .9em;
 color: #feffff;
-font-weight: 400;
+font-weight: 500;
 }
  
 .menu a:hover{
@@ -1077,9 +1076,7 @@ padding: 75px 0;
 }
 
 .developer {
-justify-content: flex-end;
 text-align: center;
-padding-right: 10px;
 }
 
 .create {
@@ -1338,11 +1335,11 @@ h4 {
 }
 
 figure {
-  width: 50%;
+  width: 55%;
 }
 
 a.logo {
-  width: 80%;
+  width: 100%;
 }
 
 .logo img {
