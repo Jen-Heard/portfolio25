@@ -214,7 +214,7 @@ main {
   flex-direction: column;
   width: 55%;
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .footer-icons {
@@ -287,8 +287,6 @@ a .footer-icon {
   padding: 0 5px; 
   border-radius: 10px;
  }
-
- /* Nav menu */
 
 .nav{
 width: 100%;
@@ -780,6 +778,7 @@ width: 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
   margin-bottom: 40px;
 }
 
@@ -811,14 +810,14 @@ width: 90%;
   width: 70%;
 }
 
-.dropdown-content button:hover {
-  background-color: #feffff;
-  color: #151519;
+#contact-form button:hover {
+  transform: scale(1.05) translateY(-5px);
 }
 
-#contact-form button:hover {
-  background-color: #feffff;
-  color: #151519;
+#loading-message, #thank-you-message {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #40e0d0;
 }
 
 #contact-form input[type=text], #contact-form input[type=email], #contact-form textarea {
@@ -857,36 +856,103 @@ width: 90%;
 
 /*** Policies page ***/
 
+#policies div.content-wrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 25px 0;
+} 
+
+.general,
+#topics,
+#collect,
+#use,
+#share,
+#store,
+#email-marketing,
+#behavioral,
+#data-protection,
+#third-party,
+#changes,
+#complaints {
+  display: flex;
+  justify-content: center;
+}
+
+#policies p {
+  padding: 10px 10px;
+  font-size: .9em;
+  font-weight: 300;
+  line-height: 1.4em;
+  width: 90%;
+}
+
+#policies ul {
+  list-style: disc;
+  color: #feffff;
+  padding: 5px 0 5px 25px;
+  font-size: .9;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+#policies ul li {
+  padding: 3px 0;
+}
+
+#policies h4 {
+  font-size: 1.1em;
+  font-weight: 400;
+  padding: 15px 0;
+  align-self: center;
+}
+
+p.top {
+  text-align: center;
+  align-self: center;
+}
+
+p.top a {
+  background: linear-gradient(to left, #feffff, #40e0d0 100%);
+  background-position: 0 100%;
+  background-size: 100% 2px;
+  background-repeat: repeat-x;
+}
+
+.general h1 {
+  font-size: 1.5em;
+  text-align: center;
+  align-self: center;
+  font-weight: 400; 
+  padding-bottom: 4px;
+}
+
+.general h2 {
+  font-size: 1.4em;
+  text-align: center;
+  align-self: center;
+  font-weight: 300; 
+  padding-bottom: 30px;
+}
+
+#topics {
+  width: 100%;
+}
+
+#topics h4 {
+  align-self: flex-start;
+  padding-left: 15px;
+}
 
 
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
 
 .hidden,
 [hidden] {
   display: none !important;
 }
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
 
 .sr-only {
   border: 0;
@@ -898,14 +964,7 @@ width: 90%;
   position: absolute;
   white-space: nowrap;
   width: 1px;
-  /* 1 */
 }
-
-/*
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
@@ -918,25 +977,9 @@ width: 90%;
   width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
 .invisible {
   visibility: hidden;
 }
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
 
 .clearfix::before,
 .clearfix::after {
@@ -948,80 +991,72 @@ width: 90%;
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
 /************** Tablet Styles ******************/
 @media only screen and (min-width: 768px) {
 
   h1 {
-    font-size: 2.8em;
+font-size: 2.8em;
   }
 
   h2 {
-    font-size: 2em;
+font-size: 2em;
   }
 
   h3 {
-    font-size: 1.5em;
+ font-size: 1.5em;
   }
 
-  h4 {
-    font-size: 1.4em;
-  }
+ h4 {
+font-size: 1.4em;
+}
 
-  .header .content-wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
+.header .content-wrapper {
+flex-direction: row;
+justify-content: space-between;
+width: 100%;
+ }
+figure {
+width: 35%;
+margin: 0;
+padding-left: 20px;
+} 
 
-   figure {
-      width: 35%;
-      margin: 0;
-      padding-left: 20px;
-    } 
+.logo img { 
+width: 60%;
+margin: 0; 
+}
 
-   .logo img { 
-      width: 60%;
-      margin: 0; 
-     }
+.nav {
+position: static;
+max-height: none; 
+display: flex;
+justify-content: flex-end;
+align-items: center;
+background-color: transparent;
+width: 70%;
+}
 
-     .nav {
-     position: static;
-     max-height: none; 
-     display: flex;
-     justify-content: flex-end;
-     align-items: center;
-     background-color: transparent;
-     width: 70%;
-    }
-        
-    .menu {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1em;
-    }
+.menu {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+align-items: center;
+font-size: 1em;
+}
+.menu a {
+font-size: 1em;
+color: #feffff;
+font-weight: bold;
+}
+ 
+.menu a:hover{
+background-color: transparent;
+color: #40e0d0; 
+}
 
-    .menu a {
-      font-size: 1em;
-      color: #feffff;
-      font-weight: bold;
-    }
-  
-    .menu a:hover{
-        background-color: transparent;
-        color: #40e0d0;
-      }
-
-    .hamb {
-        display: none;
-    }
+.hamb {
+display: none;
+}
 
 .hero-section {
 padding: 75px 0;
@@ -1181,52 +1216,81 @@ font-size: 1.2em;
  width: 50%;
   }
 
-  #contact-form input[type=text], #contact-form input[type=email], #contact-form textarea {
-    width: 100%;
-  }
+#contact-form input[type=text], #contact-form input[type=email], #contact-form textarea {
+width: 100%;
+}
 
   #contact-form textarea {
-    height: 150px;
+height: 150px;
   }
 
-  #contact-form label {
-    font-size: 1.3em;
-  }
+#contact-form label {
+font-size: 1.3em;
+}
 
-  #contact-form .services-checkboxes label {
-    font-size: 1.1em;
-  }
+#contact-form .services-checkboxes label {
+font-size: 1.1em;
+}
 
-  .connect {
-    align-items: center;
-    padding-bottom: 20px;
-  }
+.connect {
+ align-items: center;
+ padding-bottom: 20px;
+}
 
-  .connect h2 {
-    padding-bottom: 30px;
-    font-weight: 400;
-  }
+ .connect h2 {
+padding-bottom: 30px;
+ font-weight: 400;
+ }
 
-  .footer-icons {
-    width: 70%;
-  }
+.footer-icons {
+ width: 70%;
+ }
 
-  #footer {
-    padding-top: 50px;
-  }
+#footer {
+padding-top: 50px;
+ }
 
-  a .footer-icon {
-    font-size: 2.8em;
-  } 
+a .footer-icon {
+ font-size: 2.8em;
+} 
   
-  #footer a .fa-sharp {
-    font-size: 2.8em;
-  }
+#footer a .fa-sharp {
+ font-size: 2.8em;
+ }
 
-  .copyright-policies p {
-    font-size: 1.2em;
-  }
+.copyright-policies p {
+font-size: 1.2em;
+}
 
+/**** Policies ****/
+
+#policies p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  width: 80%;
+}
+
+#policies h4 {
+  font-size: 1.3em;
+}
+
+#policies ul {
+  font-size: 1.1em;
+  width: 80%;
+}
+
+.general h1 {
+  font-size: 1.6em;
+  padding-bottom: 6px;
+}
+
+.general h2 {
+  font-size: 1.5em;
+  padding-bottom: 40px;
+}
+
+#topics h4 {
+  padding-left: 50px;
 }
 
 /************** Desktop Styles ******************/
@@ -1497,28 +1561,60 @@ font-size: 1.6em;
 padding-top: 75px;
 }
 
+.connect {
+  padding-bottom: 25px;
+}
+
 .footer-icons {
 width: 50%;
 padding: 20px 0;
+}
+
+/**** Policies ****/
+
+#policies p {
+  font-size: 1.2em;
+  width: 75%;
+}
+
+#policies h4 {
+  font-size: 1.5em;
+}
+
+#policies ul {
+  font-size: 1.2em;
+  width: 75%;
+}
+
+#policies ul li {
+  padding: 5px 0;
+}
+
+.general h1 {
+  font-size: 1.8em;
+}
+
+.general h2 {
+  font-size: 1.7em;
+  padding-bottom: 50px;
+}
+
+#topics h4 {
+  padding-left: 125px;
+}
 
 }
 
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+
 }
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+}
 
 @media print {
   *,
@@ -1526,7 +1622,6 @@ padding: 20px 0;
   *::after {
     background: #fff !important;
     color: #000 !important;
-    /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -1544,10 +1639,6 @@ padding: 20px 0;
     content: " (" attr(title) ")";
   }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
   a[href^="#"]::after,
   a[href^="javascript:"]::after {
     content: "";
@@ -1589,3 +1680,4 @@ padding: 20px 0;
   }
 }
 
+}

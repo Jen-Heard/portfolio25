@@ -14,7 +14,6 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
 
   <script src="https://kit.fontawesome.com/abde1d4363.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/b0bfdbac45.js" crossorigin="anonymous"></script>
@@ -29,18 +28,14 @@
   <meta name="theme-color" content="#fafafa">
 <script src="js/main.js" defer></script>
   <style>
-    /* Add your styles here */
   </style>
 
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-
   <header class="header">
     <div class="content-wrapper">
-  <!-- Top Navigation Menu -->
    <figure>
     <a href="#home" class="logo">
       <img src="img/logo-personal-white.png" alt="Jen Heard Digital logo">
@@ -179,10 +174,8 @@
       </div>
       </div>
       </article>
-  
-      
+        
       <a href="javascript:void(0);" id="see-more" onclick="showMore()">View More</a>
-    <!-- </div> -->
     </div>
   </section>
   
@@ -302,9 +295,10 @@
       <label for="message">Message</label>
       <textarea id="message" placeholder="How can I help?" name="message" rows="4" cols="50" required></textarea><br><br>
   
-      <button type="submit">I'm Ready</button>
+      <button type="submit" id="submit-button">I'm Ready</button>
   </form>
-  
+  <div id="loading-message" style="display: none;">Processing...</div>
+  <div id="thank-you-message" style="display: none;">Thank you for your message!</div>
   </div>
   </aside> 
   
@@ -325,23 +319,24 @@
   </div>
   <div class="copyright-policies">
     <p class="copyright">© 2025 Jen Heard Digital</p>
-    <!-- <a href="policies/index.html" rel="noopener" target="_blank"><p>Privacy Policy | Terms of Service</p></a> -->
+    <a href="policies/index.html" rel="noopener" target="_blank"><p>Privacy Policy | Terms of Service</p></a>
     </div>
   </div>
   </footer>
 
-
-
-
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-     (function(){
-        emailjs.init("kdKWzxhyUvX1ZUKX_");
-     })();
-  </script>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+  publicKey: "kdKWzxhyUvX1ZUKX_",
+});
+})();
+</script>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;

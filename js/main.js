@@ -32,22 +32,16 @@ function myFunction() {
     });
     document.getElementById('see-more').style.display = 'none'; 
   }
-  
-  //   document.getElementById('contact-form').addEventListener('submit', function(event) {
-  //     event.preventDefault();
-  
-  //     const name = document.getElementById('name').value;
-  //     const email = document.getElementById('email').value;
-  //     const services = Array.from(document.querySelectorAll('input[name="services"]:checked')).map(cb => cb.value);
-  //     const message = document.getElementById('message').value;
-  
-  //     const mailtoLink = `mailto:jenlheard@icloud.com?subject=Contact Form Submission&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AServices: ${services.join(', ')}%0D%0AMessage: ${message}`;
-      
-  //     window.location.href = mailtoLink;
-  // });
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
+
+    const submitButton = document.getElementById('submit-button');
+    const loadingMessage = document.getElementById('loading-message');
+    const thankYouMessage = document.getElementById('thank-you-message');
+ 
+    submitButton.disabled = true;
+    loadingMessage.style.display = 'block';
  
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -63,8 +57,15 @@ function myFunction() {
  
     emailjs.send('service_y4rwqtp', 'template_w8xgmyi', templateParams)
        .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-       }, function(error) {
-          console.log('FAILED...', error);
-       });
- });
+        console.log('SUCCESS!', response.status, response.text);
+        loadingMessage.style.display = 'none';
+        thankYouMessage.style.display = 'block';
+
+        document.getElementById('contact-form').reset();
+        submitButton.disabled = false;
+     }, function(error) {
+        console.log('FAILED...', error);
+        loadingMessage.style.display = 'none';
+        submitButton.disabled = false;
+     });
+});
