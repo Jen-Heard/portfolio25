@@ -1,0 +1,1 @@
+Personal website built from a boilerplate template and customized through completion as part of a final project for a Front-End Development certificate (Skillcrush). Utilized HTML, CSS, and JavaScript to structure content, style components, and create a responsive user experience.
